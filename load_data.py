@@ -1,8 +1,16 @@
 import os
 import pandas as pd
 
-path = "data"
+path = "data/"
 # def load(path):
-
-    read_data = pd.read_json("data/"+path)
-    print(read_data)
+data_list = os.listdir(path)
+panda_list = {}
+for _ in data_list:
+    panda_list[_] = pd.read_json(path + _)
+finance_data = panda_list['finance.json']
+forex_data = panda_list['forex.json']
+fund_data = panda_list['fund.json']
+futures_data = panda_list['futures.json']
+global_data = panda_list['global.json']
+other_data = panda_list['other.json']
+stock_data = panda_list['stock.json']
