@@ -1,5 +1,7 @@
 import os
 import pandas as pd
+import codecs
+
 
 path = "data/"
 # def load(path):
@@ -14,3 +16,10 @@ futures_data = panda_list['futures.json']
 global_data = panda_list['global.json']
 other_data = panda_list['other.json']
 stock_data = panda_list['stock.json']
+print(finance_data['content'][1])
+
+for k, v in panda_list.items():
+    print(v)
+    for i in range(len(v)):
+
+        # print(i)
